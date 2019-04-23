@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改店名"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="13sp"
+        android:textColor="#000"/>
+    <EditText
+        android:id="@+id/modify_name_merchant_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/edit_view_shap"
+        android:layout_marginTop="40dp"
+        android:textSize="13sp"
+        android:hint="新店名"/>
+
+
+    <View
+        android:layout_below="@id/modify_name_merchant_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="0.2px"
+        android:layout_marginTop="5dp"
+        android:background="#000"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/xiugaimima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改密码"
+        android:layout_below="@id/modify_name_merchant_edittext"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:textSize="13sp"
+        android:layout_marginLeft="30dp"/>
+
+    <EditText
+        android:id="@+id/merchant_modify_password_old"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="旧密码"
+        android:layout_below="@id/xiugaimima"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textSize="13sp"
+        android:background="@drawable/edit_view_shap"
+        android:layout_marginTop="10dp"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/merchant_modify_password_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:hint="新密码"
+        android:layout_below="@id/merchant_modify_password_old"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/edit_view_shap"
+        android:layout_marginTop="5dp"
+        android:inputType="textPassword" />
+
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="0.2px"
+        android:layout_marginTop="5dp"
+        android:background="#000"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/merchant_modify_password_new"/>
+
+    <TextView
+        android:id="@+id/xiugaixiangxidizhi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改详细地址"
+        android:layout_below="@id/line2"
+        android:layout_marginTop="5dp"
+        android:textColor="#000"
+        android:textSize="13sp"
+        android:layout_marginLeft="30dp"/>
+
+    <EditText
+        android:id="@+id/merchant_modify_address_eddittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="详细地址"
+        android:layout_below="@id/xiugaixiangxidizhi"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textSize="13sp"
+        android:background="@drawable/edit_view_shap"
+        android:layout_marginTop="10dp"
+        android:singleLine="true" />
+
+    <View
+        android:id="@+id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="0.2px"
+        android:layout_marginTop="5dp"
+        android:background="#000"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/merchant_modify_address_eddittext"/>
+
+    <TextView
+        android:id="@+id/xiugaibeizhu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/merchant_modify_address_eddittext"
+        android:text="描述信息"
+        android:textColor="#000"
+        android:textSize="13sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/merchant_modify_statement_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="描述信息"
+        android:layout_below="@id/xiugaibeizhu"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/edit_view_shap"
+        android:layout_marginTop="10dp"
+        android:textSize="13sp"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/merchant_modify_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/button_shape"
+        android:text="提交"
+        android:textColor="#fff"
+        android:layout_below="@id/merchant_modify_statement_edittext"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

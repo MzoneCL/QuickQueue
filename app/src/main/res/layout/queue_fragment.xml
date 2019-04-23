@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/queue_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--没有排队时的页面显示-->
+    <TextView
+        android:id="@+id/queue_when_not_in_queue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="您当前未在排队......"
+        android:gravity="center"
+        android:layout_marginTop="200dp"
+        android:textSize="20dp"
+        android:visibility="gone"/>
+
+
+    <!--有队列时显示-->
+    <LinearLayout
+        android:id="@+id/queue_when_in_queue"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:visibility="gone">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/queue_fragment_button_go_where"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/queue_fragment_button_go_where"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="13dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#000" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/queue_fragment_merchant_text_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="某某商家"
+                        android:textColor="#000"
+                        android:textSize="25dp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2px"
+                    android:layout_marginTop="10dp"
+                    android:background="#aaa" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="商家信息" />
+
+                    <TextView
+                        android:id="@+id/queue_fragment_merchant_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/card_info_merchant_go"
+                        android:text="某某商家" />
+
+                    <ImageButton
+                        android:id="@+id/card_info_merchant_go"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="#fff"
+                        android:src="@drawable/arrow_go" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="排号时间" />
+
+                    <TextView
+                        android:id="@+id/queue_fragment_time_get_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="商家位置" />
+
+                    <TextView
+                        android:id="@+id/queue_fragment_merchant_location"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:maxLines="2"
+                        android:text="某街道某路某号" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2px"
+                    android:background="#aaa" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dangqianhaoma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="当前号码" />
+
+                    <TextView
+                        android:id="@+id/queue_fragment_waiting_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dangqianhaoma"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#000"
+                        android:textSize="50dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2px"
+                    android:background="#aaa" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dengdaishijian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="还需等待时间" />
+
+                    <TextView
+                        android:id="@+id/queue_fragment_waiting_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dengdaishijian"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#000"
+                        android:textSize="50dp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="还没到您的顺序，请耐心的等待哦......" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#000" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/queue_fragment_button_go_where"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="附近地点"
+                android:textColor="#fff"
+                android:layout_margin="15dp"
+                android:background="@drawable/button_shape"/>
+
+            <Button
+                android:id="@+id/queue_fragment_button_cancel_queue"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="取消排队"
+                android:textColor="#fff"
+                android:layout_margin="15dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/button_shape"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

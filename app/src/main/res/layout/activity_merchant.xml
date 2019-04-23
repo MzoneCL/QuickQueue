@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout_merchant">
+
+    <!--没有队列的时候的布局-->
+    <RelativeLayout
+        android:id="@+id/merchant_layout_not_has_queue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eee"
+        android:visibility="gone">
+        <ImageButton
+            android:id="@+id/merchant_create_queue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/create_queue"
+            android:background="#eee"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="创建队列"
+            android:textColor="#000"
+            android:layout_below="@id/merchant_create_queue"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <!--有队列的时候的布局-->
+    <LinearLayout
+        android:id="@+id/merchant_layout_has_queue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/merchant_queue_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </ListView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1px"
+            android:background="#aaa"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/num_of_queue"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="0 / 0"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/close_queue"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:text="关闭队列"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/button_shape"
+                android:textColor="#fff"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view_merchant"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_menu_merchant"
+        >
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

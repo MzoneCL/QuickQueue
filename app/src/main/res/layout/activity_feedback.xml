@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.quickqueue.ui.FeedbackActivity">
+
+    <RelativeLayout
+        android:id="@+id/wusuowei"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+        <ImageButton
+            android:id="@+id/back_to_mainactivity_from_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:src="@mipmap/back"
+            android:background="@color/colorPrimary"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="反馈"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:padding="10dp"
+            />
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/wusuowei1"
+        android:layout_below="@id/wusuowei"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请在下方写下您的反馈意见："
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp" />
+    <EditText
+        android:id="@+id/feedback_edit_text"
+        android:layout_below="@id/wusuowei1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_view_shap"
+        android:layout_margin="10dp"/>
+    <Button
+        android:id="@+id/feedback_button_send"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:background="@drawable/button_shape"/>
+
+</RelativeLayout>

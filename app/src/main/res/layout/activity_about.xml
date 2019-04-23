@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+        <ImageButton
+            android:id="@+id/back_to_mainactivity_from_about"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:src="@mipmap/back"
+            android:background="@color/colorPrimary"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="关于"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:padding="10dp"
+            />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/fdsgffdgd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="版本：1.0.0"
+        android:gravity="center"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fdsgffdgd"
+        android:gravity="center"
+        android:text="制作团队：马从锂 牛萌亮 沈云霄"/>
+
+</RelativeLayout>

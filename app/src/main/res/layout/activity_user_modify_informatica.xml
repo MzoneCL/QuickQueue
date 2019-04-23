@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改昵称"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="15dp"
+        android:textColor="#000"/>
+    <EditText
+        android:id="@+id/modify_nickname_user_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textSize="15sp"
+        android:background="@drawable/edit_view_shap"
+        android:layout_marginTop="60dp"
+        android:hint="昵称(不能为空且不含空格)"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2px"
+        android:layout_marginTop="111dp"
+        android:background="#000"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/xiugaimima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改密码"
+        android:layout_below="@id/modify_nickname_user_edittext"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"
+        android:textSize="15dp"
+        android:layout_marginLeft="30dp"/>
+
+    <EditText
+        android:id="@+id/user_modify_password_old"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入旧密码"
+        android:textSize="15sp"
+        android:layout_below="@id/xiugaimima"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/edit_view_shap"
+        android:layout_marginTop="10dp"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/user_modify_password_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入新密码(8 - 16为字符)"
+        android:layout_below="@id/user_modify_password_old"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textSize="15sp"
+        android:background="@drawable/edit_view_shap"
+        android:layout_marginTop="20dp"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/user_modify_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_shape"
+        android:text="提交"
+        android:textColor="#fff"
+        android:layout_below="@id/user_modify_password_new"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>

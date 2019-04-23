@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/dancishichang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="单次时长(min)"
+        android:textSize="15sp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="67dp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/zuidarenshu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="最大排队人数"
+        android:textColor="#000"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="66dp"
+        android:textSize="15sp"
+        android:layout_alignParentRight="true"/>
+
+    <EditText
+        android:id="@+id/edittext_service_time"
+        android:layout_width="100dp"
+        android:background="@drawable/edit_view_shap"
+        android:layout_below="@id/zuidarenshu"
+        android:layout_marginLeft="62dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/edit_text_maxnum"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_view_shap"
+        android:layout_below="@id/dancishichang"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="60dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/commit"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="确认"
+        android:textColor="#fff"
+        android:background="@drawable/button_shape"
+        android:layout_below="@id/edit_text_maxnum"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="50dp"/>
+
+
+</RelativeLayout>

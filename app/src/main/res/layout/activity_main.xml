@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/main_activity_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </FrameLayout>
+
+        <RadioGroup
+            android:id="@+id/main_activity_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:id="@+id/radioButton_home"
+                android:text="扫码"
+                style="@style/MainButtonStyle"
+                android:drawableTop="@drawable/home_tab"
+                />
+
+            <!--我是一条线-->
+            <View
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:background="#fff"
+                />
+
+            <RadioButton
+                android:id="@+id/radioButton_queue"
+                style="@style/MainButtonStyle"
+                android:text="队列"
+                android:drawableTop="@drawable/queue_tab"
+                />
+
+            <!--我是一条线-->
+            <View
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:background="#fff"
+                />
+
+            <RadioButton
+                android:id="@+id/radioButton_history"
+                style="@style/MainButtonStyle"
+                android:text="足迹"
+                android:drawableTop="@drawable/history_tab"/>
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/navagation_menu"
+        >
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

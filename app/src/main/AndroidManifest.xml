@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.quickqueue">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- 自动聚焦权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".util.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="Ws4pCPudeF0RyhjAR9CR1qQTd9ecumjM" />
+
+        <activity
+            android:name=".ui.WelcomeActivity"
+            android:theme="@style/NotitleandTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="" />
+        <activity
+            android:name=".ui.RegisterActivity"
+            android:label="用户注册"
+            android:theme="@style/Notitle" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:theme="@style/Notitle" />
+        <activity
+            android:name=".ui.TheStartActivity"
+            android:theme="@style/Notitle" />
+        <activity
+            android:name=".ui.RegisterSuccess"
+            android:theme="@style/Notitle" />
+        <activity
+            android:name=".ui.MerchantActivity"
+            android:label="" />
+        <activity
+            android:name=".ui.MerchantRegisterActivity"
+            android:label="商家注册"
+            android:theme="@style/Notitle" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <activity
+            android:name=".ui.NavigationAndLocationActivity"
+            android:theme="@style/Notitle" />
+        <activity
+            android:name=".ui.NavigationActivity"
+            android:theme="@style/Notitle" />
+        <activity
+            android:name=".ui.CustomScanActivity"
+            android:label="扫码排队" />
+        <activity
+            android:name=".ui.MerchantLoginActivity"
+            android:theme="@style/Notitle" />
+        <activity
+            android:name=".ui.MerchantRegisterSuccessActivity"
+            android:theme="@style/Notitle" />
+        <activity
+            android:name=".ui.AboutActivity"
+            android:theme="@style/Notitle" />
+        <activity
+            android:name=".ui.CheckUpdateActivity"
+            android:theme="@style/Notitle" />
+        <activity
+            android:name=".ui.FeedbackActivity"
+            android:theme="@style/Notitle" />
+        <activity android:name=".ui.ShowZxing" />
+        <activity android:name=".ui.FeedbackSuccess" />
+        <activity android:name=".ui.UserModifyInformatica" />
+        <activity android:name=".ui.MerchantModifyInformatica" />
+        <activity
+            android:name=".ui.UserModifySuccess"
+            android:theme="@style/Notitle" />
+        <activity android:name=".ui.MerchantModifySuccess" />
+        <activity android:name=".ui.MerchantInitQueue" />
+        <activity android:name=".ui.UserInfoInQueue" />
+        <activity android:name=".ui.MerchantInfo" />
+        <activity android:name=".ui.MerchantInfoInFootmark"></activity>
+    </application>
+
+</manifest>

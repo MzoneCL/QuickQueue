@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!--没有排队的时候的布局-->
+    <RelativeLayout
+        android:id="@+id/home_fragment_user_not_in_queue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/add_into_queue"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/saoyisao"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_into_queue"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="扫码排队"
+            android:textColor="#000"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/home_fragment_user_in_queue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正 在 排 队 ，请 等 待 . . . . . ."
+            android:textSize="17sp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
