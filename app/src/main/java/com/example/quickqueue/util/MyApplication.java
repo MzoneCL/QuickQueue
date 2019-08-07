@@ -18,7 +18,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate(){
         super.onCreate();
-        AVOSCloud.initialize(this,"3rFUuCtvWb7GdeWqqkMSBNId-gzGzoHsz","feSBeXd7tuVLyPVlpucPea6s");
+        AVOSCloud.initialize(this,"3rFUuCtvWb7GdeWqqkMSBNId-gzGzoz","feSBeXd7tuVLyPVlcPea6s");
         AVOSCloud.setDebugLogEnabled(true);
         context = getApplicationContext();
         LitePal.initialize(context);
